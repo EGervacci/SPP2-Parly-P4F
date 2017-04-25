@@ -4,14 +4,17 @@
  * and open the template in the editor.
  */
 package spp2.parly.p4f;
-
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author usuario
+/** 
+ *Parly
+ *CECILIA GUTIÉRREZ DE LARA HERNÁNDEZ
+ *NORMA LEDEZMA MARTÍNEZ
+ *ERICK EDUARDO GERVACCI ROMERO
+ *DIEGO SANTANA LEIVA
+ *BENITO RAFAEL MORANTE VÁZQUEZ
  */
+
 public class SPP2ParlyP4F {
 
     /**
