@@ -90,7 +90,8 @@ public class SPP2ParlyP4F {
                 dato = JOptionPane.showInputDialog(null, mensaje);
                 flag = false;
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Error");
+                //JOptionPane.showMessageDialog(null, "Error");
+                dato = "salir";
                 flag = true;
             }
         } while (flag);
@@ -117,22 +118,24 @@ public class SPP2ParlyP4F {
     }
     public static double[] MatrizVenta(String[][] inventario) {
         
-        int t = solicitaInt("Ingrese el total de artículos vendidos");
+        int t = 10000000;
         double dato=0;
         int contador=0;
         double[] Matriz = new double[t];
+        String articulo = "";
         do {
-            String articulo = solicitaString("Ingrese el código del artículo");
+            articulo = solicitaString("Ingrese el código del artículo");
+            if (articulo!=null){
             for (int i = 0; i < inventario.length; i++) {
                 if(articulo.equals(inventario[i][0])){
                     JOptionPane.showMessageDialog(null,inventario[i][1]+"(Producto "+(i+1)+")");
                     dato = Double.parseDouble(inventario[i][2]);
                     Matriz[contador] = dato;
-                    t = t-1;
                     contador = contador+1;
                 }   
             }
-        } while (t>0);
+        } 
+        }while (articulo!=null);
         
         return Matriz;
     }
